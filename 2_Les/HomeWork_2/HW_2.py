@@ -14,3 +14,11 @@ S = int(input("Введите сумму чисел: "))
 num1 = (S + math.sqrt(S ** 2 - 4 * P)) / 2
 num2 = (S - math.sqrt(S ** 2 - 4 * P)) / 2
 print(f"Загаданные числа: {num1} и {num2}")
+
+
+# x = int(input())
+# y = int(input())
+# for i in range(x):
+#     for j in range(y):
+#         if x == i + j and y == i * j:
+#             print(i, j)
