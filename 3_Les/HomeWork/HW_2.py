@@ -53,4 +53,19 @@ for el in range(1, n):
         count = temp
         numbers = array[el]
 print(numbers)
+
+import random
+
+n=int(input('введите колличество элементов в массиве: '))
+num_list=[0]*n
+
+for index in range(n):
+    num_list[index]=random.randint(0,10)
+print(num_list)
+search= int(input('введите искомое число от 1 до 5: '))
+
+num_list1=[count for count in num_list if count>search]
+num_list1.sort()
+print(num_list1)
+print(num_list1[0])
     
