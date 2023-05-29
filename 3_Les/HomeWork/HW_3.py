@@ -22,15 +22,19 @@
 #     12
 
 
-list_English = {1:'AEIOULNSTR', 2:'DG', 3:'BCMP',
-                4:'FHVWY', 5:"K" , 8:'JX', 10:'QZ'}
-list_Russian = {1:'АВЕИНОРСТ', 2:'ДКЛМПУ', 3:'БГЁЬЯ',
-                4:'ЙЫ', 5:'ЖЗХЦЧ', 8:'ШЭЮ', 10:'ФШЪ'}
-language = int(input('Введите 0 для английского языка или 1 для русского языка'))
-text = input('Введите слово: ').upper()
-sum = 0
-if language == 0:
-    for key in list_English:
-       # А дальше я не знаю, как мне написать, что я хочу сложить ключи в sum)
-
+values = {'A, E, I, O, U, L, N, S, T, R, А, В, Е, И, Н, О, Р, С, Т': 1,
+          'Д, К, Л, М, П, У, D, G': 2,
+          'B, C, M, P, Б, Г, Ё, Ь, Я': 3,
+          'F, H, V, W, Y, Й, Ы': 4,
+          'K, Ж, З, Х, Ц, Ч': 5,
+          'J, X, Ш, Э, Ю': 8,
+          'Q, Z, Ф, Щ, Ъ': 10}
+word = input("Введите слово: ").upper()
+# print(word)
+result = 0
+for i in word:
+    for key in values:
+        if i in key:
+            result += values[key]
+print(result)
 
