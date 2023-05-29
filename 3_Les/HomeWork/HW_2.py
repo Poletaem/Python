@@ -23,4 +23,34 @@ for i in range(1, n):
         min = list_1[i]
 print(f'Ближе всего к указанному числу {min}')
 
+
+
+n = int(input("Введите кол-во элементов: "))
+array = [int(i) for i in input("Введите значения массива: ").split()] 
+x = int(input("Введите число, которое нужно подсчитать: "))
+count = x - array[0]
+if count < 0:
+    count *= (-1)
+numbers = array[0]
+for el in range(1, n):
+    temp = x - array[el]
+    if temp < 0:
+        temp *= (-1)
+    if count > temp:
+        count = temp
+        numbers = array[el]
+print(numbers)
+
+
+n = int(input("Введите кол-во элементов: "))
+array = [int(i) for i in input("Введите значения массива: ").split()] 
+x = int(input("Введите число, которое нужно подсчитать: "))
+count = abs(x - array[0])
+numbers = array[0]
+for el in range(1, n):
+    temp = abs(x - array[el])
+    if count > temp:
+        count = temp
+        numbers = array[el]
+print(numbers)
     
