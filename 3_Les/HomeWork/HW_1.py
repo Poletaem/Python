@@ -21,12 +21,15 @@ for i in range(n):
 print(f'Число {X} встречается {count} раз')
 
 
+
+
 n = int(input("Введите кол-во элементов: "))
-array = [int(i) for i in input("Введите значения массива: ").split()]
+#В питоне это ограничение игнорируется, но нельзя создать массив не задав его значение!
+array = [int(i) for i in input("Введите значения массива: ").split()]  #Задаем именно целыми числами и разделяем по пробелу
 x = int(input("Введите число, которое нужно подсчитать: "))
 count = 0
-for el in array:
-    if el == x:
+for el in array:        # for el in range(n):      #el просто переменная, всместо i
+    if el == x:               #if array[el] == x
         count += 1
 print(count)
 

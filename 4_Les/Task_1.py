@@ -7,9 +7,9 @@
 # Для решения данной задачи используйте функцию .split()
 
 word = input("Введите строку: ").split()
-result = {}
-for i in word:
-    if i in result:
+result = {}             # слово сложили в словарь ключами
+for i in word:          # 1.проходимся по каждому символу
+    if i in result:     # 2.если i уже есть в словаре
         print(f'{i}_{result[i]}', end=' ')
     else:
         print(i, end=' ')
