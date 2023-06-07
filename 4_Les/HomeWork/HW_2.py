@@ -30,3 +30,4 @@ for i in range(n):
         berry.append(sum)
 print(f'Максимальное количество ягод, которое можно собрать {max(berry)}')
 
+
