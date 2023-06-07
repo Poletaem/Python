@@ -12,7 +12,7 @@ B = int(input("Введите степень числа: "))
 
 def pov(A, B):
     if B == 1:
-        return A
+        return A             Лучше поставить точку остановки if b == 0: return 1 так как a^0 = 1(любое число в степени 0 равно 1)
     return A * pov(A, B - 1)
 print(pov(A, B))
 
