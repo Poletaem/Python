@@ -33,3 +33,18 @@ str = input("Введите стих: ")
 rhythm(str)
 
 
+text = input().lower().split()
+vowels = 'аеоуюёэяи'
+result = set()
+for word in text:
+    count = 0
+    for i in word:
+        if i in vowels:
+            count += 1
+    result.add(count)
+    
+if len(result) == 1:
+    print("Парам пам-пам")
+else:
+    print("Парам пам")
+
