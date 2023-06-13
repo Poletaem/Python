@@ -17,7 +17,11 @@
 # 6  12 18 24 30 36 
 
 def print_operation_table(operation, num_rows=6, num_columns=6):
-   nums = []
-   for x in range(1, num_rows + 1):
-      for y in range(1, num_columns +1):
-         
+   print(' '.join([str(i) for i in range(1, num_columns +1)]))    #просто вывели на экран первую строку, соеденив элементы пробелами
+   for i in range(2, num_rows + 1):
+      print(i, end=' \t')
+      for j in range(2, num_columns + 2):
+         print(operation(i, j), end=' \t')
+      print()
+
+print_operation_table(lambda x, y: x + y)

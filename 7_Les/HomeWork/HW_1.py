@@ -15,21 +15,34 @@
 
  
 
-def rhythm(poem):
-    poem = input().split()
-    result = set()
+# def rhythm(poem):
+#     poem = input().split()
+#     result = set()
+#     count = 0
+#     for  word in poem:
+#         for litter in word:
+#             if litter in'аеёиоуыэюя':
+#                 count += 1
+#         result.add(count)
+#         count = 0
+#     if len(result) != 1:
+#         print('Пам парам')
+#     else:
+#         print('Парам пам-пам')
+# str = input("Введите стих: ")       
+# rhythm(str)
+
+
+text = input().lower().split()
+vowers = 'аоуыэяёюие'
+result = set()
+for word in text:
     count = 0
-    for  word in poem:
-        for litter in word:
-            if litter in'аеёиоуыэюя':
-                count += 1
-        result.add(count)
-        count = 0
-    if len(result) != 1:
-        print('Пам парам')
-    else:
-        print('Парам пам-пам')
-str = input("Введите стих: ")       
-rhythm(str)
-
-
+    for i in word:
+        if i in vowers:
+            count += 1
+    result.add(count)
+if len(result) == 1:
+    print('Парам пам-пам')
+else:
+    print('Парам пам')
